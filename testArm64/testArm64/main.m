@@ -25,6 +25,18 @@ int fibonacci1(int n) {
     }
 }
 
+void testif_c(void) {
+    int score = 70;
+    if (score >= 90) {
+        printf("优秀\n");
+    } else if (score >= 60 && score < 90) {
+        printf("及格\n");
+    } else {
+        printf("差\n");
+    }
+    printf("end\n");
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
@@ -34,9 +46,16 @@ int main(int argc, const char * argv[]) {
 //        printf("a: %d, b: %d, sum: %d\n", a, b, sum);
         
 //        int sum = haha(1, 2);
-        int sum = fibonacci(15);
-        int sum1 = fibonacci_1(15);
-        NSLog(@"%d  %d", sum, sum1);
+        
+//        haha1(1, 2);
+        
+//        int sum = fibonacci1(15);
+//        int sum1 = fibonacci_1(15);
+//        NSLog(@"%d  %d", sum, sum1);
+//        
+        
+        testif_c();
+        testif_asm();
         
     }
     return 0;
