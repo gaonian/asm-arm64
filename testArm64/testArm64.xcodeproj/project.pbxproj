@@ -28,6 +28,8 @@
 		7392635F2BEF635E008463E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		739263662BEF6395008463E5 /* test.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = test.s; sourceTree = "<group>"; };
 		739263682BEF63AD008463E5 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		73D76A6B2C09A35100636E0D /* main_1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main_1.m; sourceTree = "<group>"; };
+		73D76A6C2C09A35800636E0D /* main_1.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = main_1.s; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,8 @@
 		7392635E2BEF635E008463E5 /* testArm64 */ = {
 			isa = PBXGroup;
 			children = (
+				73D76A6B2C09A35100636E0D /* main_1.m */,
+				73D76A6C2C09A35800636E0D /* main_1.s */,
 				7392635F2BEF635E008463E5 /* main.m */,
 				739263682BEF63AD008463E5 /* test.h */,
 				739263662BEF6395008463E5 /* test.s */,
@@ -251,6 +255,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -259,6 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
