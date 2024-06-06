@@ -30,8 +30,8 @@ void testSwitch(void) {
         case 3:
             switch_3();
             break;
-        case 4:
-            switch_4();
+        case 30:
+            switch_5();
             break;
 //        case 5:
 //            printf("5");

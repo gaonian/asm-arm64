@@ -79,10 +79,10 @@ _testSwitch:                            ; @testSwitch
 	mov	w8, #10
 	stur	w8, [x29, #-4]
 	ldur	w8, [x29, #-4]
-	subs	w8, w8, #1
+	subs	w8, w8, #2
                                         ; kill: def $x8 killed $w8
 	str	x8, [sp]                        ; 8-byte Folded Spill
-	subs	x8, x8, #3
+	subs	x8, x8, #28
 	cset	w8, hi
 	tbnz	w8, #0, LBB8_6
 ; %bb.1:
@@ -104,7 +104,7 @@ LBB8_4:
 	bl	_switch_3
 	b	LBB8_7
 LBB8_5:
-	bl	_switch_4
+	bl	_switch_5
 	b	LBB8_7
 LBB8_6:
 	bl	_switch_other
@@ -116,9 +116,34 @@ LBB8_7:
 	.cfi_endproc
 	.p2align	2
 lJTI8_0:
-	.long	LBB8_2-Ltmp0
 	.long	LBB8_3-Ltmp0
 	.long	LBB8_4-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_2-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
+	.long	LBB8_6-Ltmp0
 	.long	LBB8_5-Ltmp0
                                         ; -- End function
 	.section	__DATA,__objc_imageinfo,regular,no_dead_strip

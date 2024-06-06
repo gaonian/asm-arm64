@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "test.h"
 #import "testSwitch.h"
+#import "testFibonacci.h"
 
 int hehe1(int a, int b) {
     return a + b + 1;
@@ -16,14 +17,6 @@ int hehe1(int a, int b) {
 int haha1(int a, int b) {
     int c = hehe1(a, b);
     return a + b + c;
-}
-
-int fibonacci1(int n) {
-    if (n <= 1){
-        return n;
-    } else {
-        return fibonacci1(n-1) + fibonacci1(n-2);
-    }
 }
 
 void testif_c(void) {
@@ -50,15 +43,17 @@ int main(int argc, const char * argv[]) {
         
 //        haha1(1, 2);
         
-//        int sum = fibonacci1(15);
-//        int sum1 = fibonacci_1(15);
-//        NSLog(@"%d  %d", sum, sum1);
-//        
-//        
+        int fibNum = 40;
+        int sum = fibonacci_asm(fibNum);
+        int sum1 = fibonacci_asm_1(fibNum);
+        NSLog(@"%d  %d", sum, sum1);
+
+        
 //        testif_c();
 //        testif_asm();
         
-        testSwitch_asm_1();
+        testSwitch_asm_1(10);
+        testSwitch_asm_2(6);
         
     }
     return 0;

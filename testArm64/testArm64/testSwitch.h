@@ -8,8 +8,8 @@
 #ifndef testSwitch_h
 #define testSwitch_h
 
-void testSwitch_asm_1(void);
+void testSwitch_asm_1(int a);
 
-void testSwitch_asm_2(void);
+void testSwitch_asm_2(int a);
 
 #endif /* testSwitch_h */
