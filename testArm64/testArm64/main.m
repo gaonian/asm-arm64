@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "test.h"
+#import "testSwitch.h"
 
 int hehe1(int a, int b) {
     return a + b + 1;
@@ -53,9 +54,11 @@ int main(int argc, const char * argv[]) {
 //        int sum1 = fibonacci_1(15);
 //        NSLog(@"%d  %d", sum, sum1);
 //        
+//        
+//        testif_c();
+//        testif_asm();
         
-        testif_c();
-        testif_asm();
+        testSwitch_asm_1();
         
     }
     return 0;
