@@ -17,66 +17,64 @@ int fibonacci1(int n) {
 
     .global _fibonacci_asm
 _fibonacci_asm:
-    sub sp, sp, #0x30
+    sub sp, sp, #48
     stp x29, x30, [sp, #32]
     stp w8, w9, [sp, #24]
     add x29, sp, #24
 
-    str w0, [x29, #-0x4]
-    cmp w0, #0x1
-    b.le _fibonacci_end
+    str w0, [x29, #-4]
+    cmp w0, #1
+    b.le LBB0_1
 
     sub w8, w0, #1
     sub w9, w0, #2
 
     mov w0, w8
     bl _fibonacci_asm
-    str w0, [x29, #-0x8]
+    str w0, [x29, #-8]
 
     mov w0, w9
     bl _fibonacci_asm
-    str w0, [x29, #-0xC]
+    str w0, [x29, #-12]
 
-    ldr w8, [x29, #-0x8]
-    ldr w9, [x29, #-0xC]
+    ldr w8, [x29, #-8]
+    ldr w9, [x29, #-12]
     add w0, w8, w9
-    str w0, [x29, #-0x4]
-
-    b _fibonacci_end
-
-_fibonacci_end:
-    ldr w0, [x29, #-0x4]
+    str w0, [x29, #-4]
+    b LBB0_1
+LBB0_1:
+    ldr w0, [x29, #-4]
     ldp w8, w9, [sp, #24]
     ldp x29, x30, [sp, #32]
-    add sp, sp, #0x30
+    add sp, sp, #48
     ret
 
 
     .global _fibonacci_asm_1
 _fibonacci_asm_1:
-    sub sp, sp, #0x20
-    stp x29, x30, [sp, #0x10]
-    add x29, sp, #0x10
+    sub sp, sp, #32
+    stp x29, x30, [sp, #16]
+    add x29, sp, #16
 
-    str w0, [x29, #-0x4]
+    str w0, [x29, #-4]
 
-    cmp w0, #0x1
-    b.le _fibonacci_1_end
+    cmp w0, #1
+    b.le LBB1_1
 
-    sub w0, w0, #0x1
+    sub w0, w0, #1
     bl _fibonacci_asm_1
-    str w0, [x29, #-0x8]
+    str w0, [x29, #-8]
 
-    ldr w0, [x29, #-0x4]
-    sub w0, w0, #0x2
+    ldr w0, [x29, #-4]
+    sub w0, w0, #2
     bl _fibonacci_asm_1
 
-    ldr w8, [x29, #-0x8]
+    ldr w8, [x29, #-8]
     add w0, w0, w8 
-    str w0, [x29, #-0x4]
+    str w0, [x29, #-4]
 
-_fibonacci_1_end:
-    ldr w0, [x29, #-0x4]
-    ldp x29, x30, [sp, #0x10]
-    add sp, sp, #0x20
+LBB1_1:
+    ldr w0, [x29, #-4]
+    ldp x29, x30, [sp, #16]
+    add sp, sp, #32
     ret
