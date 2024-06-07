@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		739263602BEF635E008463E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392635F2BEF635E008463E5 /* main.m */; };
-		739263672BEF6395008463E5 /* test.s in Sources */ = {isa = PBXBuildFile; fileRef = 739263662BEF6395008463E5 /* test.s */; };
+		73C94E5F2C1166BB00C51E37 /* testSwitch.s in Sources */ = {isa = PBXBuildFile; fileRef = 73C94E5E2C1166BB00C51E37 /* testSwitch.s */; };
+		73C94E622C11C2B000C51E37 /* testFibonacci.s in Sources */ = {isa = PBXBuildFile; fileRef = 73C94E612C11C2B000C51E37 /* testFibonacci.s */; };
+		73C94E652C12D73200C51E37 /* testIf.s in Sources */ = {isa = PBXBuildFile; fileRef = 73C94E642C12D73200C51E37 /* testIf.s */; };
+		73C94E682C12D8B000C51E37 /* testFunction.s in Sources */ = {isa = PBXBuildFile; fileRef = 73C94E672C12D8B000C51E37 /* testFunction.s */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +29,14 @@
 /* Begin PBXFileReference section */
 		7392635C2BEF635E008463E5 /* testArm64 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testArm64; sourceTree = BUILT_PRODUCTS_DIR; };
 		7392635F2BEF635E008463E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		739263662BEF6395008463E5 /* test.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = test.s; sourceTree = "<group>"; };
-		739263682BEF63AD008463E5 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		73C94E5D2C1166BB00C51E37 /* testSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testSwitch.h; sourceTree = "<group>"; };
+		73C94E5E2C1166BB00C51E37 /* testSwitch.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = testSwitch.s; sourceTree = "<group>"; };
+		73C94E602C11C2B000C51E37 /* testFibonacci.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testFibonacci.h; sourceTree = "<group>"; };
+		73C94E612C11C2B000C51E37 /* testFibonacci.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = testFibonacci.s; sourceTree = "<group>"; };
+		73C94E632C12D73200C51E37 /* testIf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testIf.h; sourceTree = "<group>"; };
+		73C94E642C12D73200C51E37 /* testIf.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = testIf.s; sourceTree = "<group>"; };
+		73C94E662C12D8B000C51E37 /* testFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testFunction.h; sourceTree = "<group>"; };
+		73C94E672C12D8B000C51E37 /* testFunction.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = testFunction.s; sourceTree = "<group>"; };
 		73D76A6B2C09A35100636E0D /* main_1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main_1.m; sourceTree = "<group>"; };
 		73D76A6C2C09A35800636E0D /* main_1.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = main_1.s; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +74,14 @@
 				73D76A6B2C09A35100636E0D /* main_1.m */,
 				73D76A6C2C09A35800636E0D /* main_1.s */,
 				7392635F2BEF635E008463E5 /* main.m */,
-				739263682BEF63AD008463E5 /* test.h */,
-				739263662BEF6395008463E5 /* test.s */,
+				73C94E662C12D8B000C51E37 /* testFunction.h */,
+				73C94E672C12D8B000C51E37 /* testFunction.s */,
+				73C94E632C12D73200C51E37 /* testIf.h */,
+				73C94E642C12D73200C51E37 /* testIf.s */,
+				73C94E602C11C2B000C51E37 /* testFibonacci.h */,
+				73C94E612C11C2B000C51E37 /* testFibonacci.s */,
+				73C94E5D2C1166BB00C51E37 /* testSwitch.h */,
+				73C94E5E2C1166BB00C51E37 /* testSwitch.s */,
 			);
 			path = testArm64;
 			sourceTree = "<group>";
@@ -129,7 +144,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				739263602BEF635E008463E5 /* main.m in Sources */,
-				739263672BEF6395008463E5 /* test.s in Sources */,
+				73C94E5F2C1166BB00C51E37 /* testSwitch.s in Sources */,
+				73C94E622C11C2B000C51E37 /* testFibonacci.s in Sources */,
+				73C94E682C12D8B000C51E37 /* testFunction.s in Sources */,
+				73C94E652C12D73200C51E37 /* testIf.s in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
